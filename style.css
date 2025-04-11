@@ -1,0 +1,342 @@
+:root {
+    --background: #f9f9f9;
+    --text: #1a1a1a;
+    --card-background: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --accent: #8234E9;
+    --accent-hover: #8234e9d0;
+    --button-text: #ffffff;
+    --link-text: #ffffff;
+    --social-bg: #f0f0f0; /* Fundo levemente acinzentado para ícones no tema claro */
+  }
+  
+  [data-theme="dark"] {
+    --background: #121212;
+    --text: #e1e1e1;
+    --card-background: #1e1e1e;
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --accent: #8234E9;
+    --accent-hover: #8234e9d0;
+    --button-text: #ffffff;
+    --link-text: #ffffff;
+    --social-bg: #2a2a2a; /* Fundo mais escuro para ícones no tema escuro */
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  main {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 30px;
+  }
+  
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 24px;
+    
+    border-radius: 16px;
+    
+  }
+  
+  .profile img {
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+  }
+  
+  .profile a {
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .profile a:hover, .profile a:focus {
+    color: var(--accent);
+  }
+  
+  .profile button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: var(--text);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .profile button:hover, .profile button:focus {
+    background-color: rgba(128, 128, 128, 0.1);
+  }
+  
+  .profile button:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  
+  .profile button::before {
+    content: "🌙";
+    font-size: 16px;
+  }
+  
+  [data-theme="dark"] .profile button::before {
+    content: "☀️";
+  }
+  
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--accent);
+    color: var(--link-text);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .links a:hover, .links a:focus {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+  }
+  
+  .links a:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  
+  /* Social links com melhor visibilidade */
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--social-bg); /* Usando cor de fundo específica */
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.08); /* Borda sutil para definição */
+  }
+  
+  .social-links a img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  
+  /* Estado hover com melhor feedback */
+  .social-links a:hover, .social-links a:focus {
+    transform: translateY(-3px);
+    background-color: var(--accent);
+  }
+  
+  /* Adicionando um pseudo-elemento para o efeito de transição de cor */
+  .social-links a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    opacity: 0;
+    background-color: var(--accent);
+    transition: opacity 0.2s ease;
+    z-index: -1;
+  }
+  
+  .social-links a:hover::after, .social-links a:focus::after {
+    opacity: 1;
+  }
+  
+  .social-links a:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  
+  /* Esconder ícones do Font Awesome */
+  .social-links a i {
+    display: none;
+  }
+
+  .text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+        text-decoration: none;
+        color: var(#8234E9);
+        font-weight: 700;
+    }
+  }
+  
+  footer {
+    text-align: center;
+    padding: 16px;
+    color: var(--text);
+    opacity: 0.7;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
+  /* Acessibilidade */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+  
+  /* Responsividade */
+  @media (max-width: 600px) {
+    body {
+      padding: 16px;
+    }
+    
+    .profile {
+      padding: 20px;
+    }
+    
+    .profile img {
+      width: 96px;
+      height: 96px;
+    }
+    
+    .links a {
+      padding: 14px;
+    }
+    
+    .social-links a {
+      width: 42px;
+      height: 42px;
+    }
+    
+    .social-links a img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .profile {
+      padding: 16px;
+    }
+    
+    .profile img {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .links a {
+      padding: 12px;
+      font-size: 14px;
+    }
+    
+    .social-links a {
+      width: 36px;
+      height: 36px;
+    }
+    
+    .social-links a img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  /* Adicione este CSS junto com o código anterior */
+
+/* Classes específicas para cada rede social - com cores de marca */
+.social-links a.github-link {
+    background-color: #24292e;
+  }
+  
+  .social-links a.instagram-link {
+    background-color:#e1306c;
+  }
+  
+  .social-links a.whatsapp-link {
+    background-color: #25d366;
+  }
+  
+  .social-links a.linkedin-link {
+    background-color: #0077b5;
+  }
+  
+  /* Colocando um wrapper para garantir que as imagens sejam visíveis */
+  .social-icon-wrapper {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    border-radius: 50%;
+    padding: 4px;
+  }
+  
+  
+  
+  /* Garantindo que as imagens fiquem bem posicionadas */
+  .social-icon-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Responsividade para os novos elementos */
+  @media (max-width: 600px) {
+    .social-icon-wrapper {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .social-icon-wrapper {
+      width: 16px;
+      height: 16px;
+    }
+  }
