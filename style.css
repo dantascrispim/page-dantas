@@ -183,7 +183,7 @@
     inset: 0;
     border-radius: 50%;
     opacity: 0;
-    background-color: var(--accent);
+    /* background-color: var(--accent); */
     transition: opacity 0.2s ease;
     z-index: -1;
   }
