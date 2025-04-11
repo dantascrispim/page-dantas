@@ -35,7 +35,7 @@ Projeto onde demostro caminhos para meus projetos e links importantes!
   Este projeto está sob a licença [MIT](https://choosealicense.com/licenses/mit/)
 
   🌐 Confira Meu Projeto: 
-    Você pode ver o projeto ao vivo aqui: 
+    Você pode ver o projeto ao vivo aqui: https://page-dantas.vercel.app/
 
 📫 Como Me Encontrar: 
 
