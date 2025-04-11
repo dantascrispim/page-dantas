@@ -258,6 +258,10 @@
       width: 20px;
       height: 20px;
     }
+
+    footer{
+      margin-top: 30px;
+    }
   }
   
   @media (max-width: 400px) {
