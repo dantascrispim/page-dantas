@@ -1,4 +1,4 @@
- ## 🖥️ Projeto Gerador de Curriculo
+ ## 🖥️ Projeto pages-dantas
   página pessoal para divulgação de projetos e links importantes! 🎉💻
 
   
