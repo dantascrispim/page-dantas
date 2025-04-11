@@ -17,7 +17,8 @@ Projeto onde demostro caminhos para meus projetos e links importantes!
 
 ## Principais Funcionalidades:
 
-✅ Divulgação de projetos
+✅ Divulgação dos meus projetos
+✅ Acesso a minhas redes sociais
 ✅ Mudança de temas de light para dark
 
 
